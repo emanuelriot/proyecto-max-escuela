@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="/assets/css/loader.css">
+<div class="loader">
+    <div class="loader_circle_open"></div>
+    <div class="loader_logotipo">
+        <span class="loader_animation1">m</span>
+        <span class="loader_animation2">a</span>
+        <span class="loader_animation3">x</span>
+    </div>
+</div>
+
+<div class="loader_transition_page"></div>
+
+<script>
+    setTimeout(() => {
+        let circle = document.querySelector('.loader_circle_open')
+        circle.classList.add('loader_circle_open_animation')
+    }, 900);
+    setTimeout(() => {
+        let text = document.querySelector('.loader_logotipo')
+        text.classList.add('loader_logotipo_color')
+    }, 1200);
+
+    setTimeout(() => {
+        let loader = document.querySelector('.loader')
+        loader.classList.add('loader_fadeout')
+    }, 1600);
+
+    setTimeout(() => {
+        let loader = document.querySelector('.loader')
+        loader.style.display = 'none';
+    }, 2600);
+</script>

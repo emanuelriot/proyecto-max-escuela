@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="/assets/css/menu.css">
+<div class="menu">
+    <div class="menu_links">
+        <a href="/inicio/" class="menu_logo hover_active">max</a>
+        <a href="/consejos/" class="hover_active">Consejos</a>
+        <a href="/comunidad/" class="hover_active">Comunidad</a>
+    </div>
+    <div class="menu_links2">
+        <a href="/recursos/" class="hover_active">Mas Recursos</a>
+        <a href="/ayuda/" class="hover_active">Ayuda</a>
+        <a href="/contacto/" class="hover_active">Contacto</a>
+    </div>
+</div>
+
+<div class="menu_mobile hover_active" onclick="openMenu();"></div>
+
+<a href="/inicio/" class="link_menu_logo hover_active">max</a>
+
+<div class="menu_mobile_fullscreen">
+    <div class="menu_mobile_fullscreen_close" onclick="closeMenu();"></div>
+    <div class="menu_mobile_fullscreen_link">
+        <span>Max</span>
+        <div onclick="closeMenu();">
+            <a href="/inicio/" class="hover_active">Inicio</a>
+            <a href="/consejos/" class="hover_active">Consejos</a>
+            <a href="/comunidad/" class="hover_active">Comunidad</a>
+            <a href="/recursos/" class="hover_active">Mas Recursos</a>
+            <a href="/ayuda/" class="hover_active">Ayuda</a>
+            <a href="/contacto/" class="hover_active">Contacto</a>
+        </div>
+        <img src="/assets/images/equis_black.png" onclick="closeMenu();" alt="close" class="hover_active">
+    </div>
+</div>
+
+<script>
+    function openMenu() {
+        let menu_full = document.querySelector('.menu_mobile_fullscreen');
+        menu_full.classList.add('menu_mobile_fullscreen_open');
+
+        setTimeout(() => {
+            let menu_close = document.querySelector('.menu_mobile_fullscreen_close');
+            menu_close.classList.add('menu_mobile_fullscreen_close_opacity');
+            let menu = document.querySelector('.menu_mobile_fullscreen_link');
+            menu.classList.add('menu_mobile_fullscreen_link_open');
+        }, 50);
+
+    }
+
+    function closeMenu() {
+        let menu_close = document.querySelector('.menu_mobile_fullscreen_close');
+        menu_close.classList.remove('menu_mobile_fullscreen_close_opacity');
+        let menu = document.querySelector('.menu_mobile_fullscreen_link');
+        menu.classList.remove('menu_mobile_fullscreen_link_open');
+
+        setTimeout(() => {
+            let menu_full = document.querySelector('.menu_mobile_fullscreen');
+            menu_full.classList.remove('menu_mobile_fullscreen_open');
+        }, 400);
+    }
+</script>

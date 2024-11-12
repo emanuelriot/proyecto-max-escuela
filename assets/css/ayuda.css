@@ -1,0 +1,35 @@
+.ayuda {
+    position: relative;
+    width: 100%;
+    min-height: 100dvh;
+    background-color: #b78fd6;
+    overflow: hidden;
+}
+
+.ayuda_center {
+    position: relative;
+    width: calc(100% - 160px);
+    max-width: 1100px;
+    margin: 120px auto 100px auto;
+    font-weight: 500;
+    color: black;
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+.ayuda_center span {
+    font-weight: 800;
+}
+
+.ayuda_center p {
+    margin: 30px 0px;
+}
+
+@media screen and (max-width: 700px) {
+    .ayuda_center {
+        width: calc(100% - 60px);
+        margin: 100px auto 80px auto;
+        font-size: 1.1rem;
+        line-height: 2.3rem;
+    }
+}

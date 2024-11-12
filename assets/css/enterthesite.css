@@ -1,0 +1,157 @@
+.enterthesite {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #eab2bb;
+    z-index: 90;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.relative_xmp {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.enterthesite_title {
+    font-size: 160px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #3c6ca8;
+    text-shadow: 3px 3px 0px rgba(108, 0, 248, 0.4), 7px 7px 0px rgba(108, 0, 248, 0.2), 11px 11px 0px rgba(108, 0, 248, 0.2);
+}
+
+.enterthesite_subtitle {
+    color: #3c6ca8;
+    font-size: 37px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.enterthesite_button {
+    width: 140px;
+    border-radius: 99px;
+    background-color: var(--purple);
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px 0px;
+    margin: 20px auto;
+    color: white;
+    box-sizing: var(--shadow);
+}
+
+.enterthesite_button:hover {
+    background-color: white;
+    color: black;
+}
+
+@media screen and (max-width: 700px) {
+    .enterthesite_title {
+        font-size: 120px;
+    }
+
+    .enterthesite_subtitle {
+        font-size: 24px;
+    }
+}
+
+.enterthesite_circle_1,
+.enterthesite_circle_2,
+.enterthesite_circle_3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    background-color: #97b1d1e3;
+    animation-name: enterthesite_circle_1;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.enterthesite_circle_2 {
+    transform: scale(0.8);
+    background-color: #9dff00ab;
+    animation-name: enterthesite_circle_2;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.enterthesite_circle_3 {
+    transform: scale(1.8);
+    background-color: #fc848425;
+    animation-name: enterthesite_circle_3;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    backdrop-filter: blur(10px);
+}
+
+@keyframes enterthesite_circle_1 {
+    0% {
+        transform: scale(1) translate(0px, 0px);
+    }
+
+    33% {
+        transform: scale(1) translate(-300px, -180px);
+    }
+
+    66% {
+        transform: scale(1) translate(-450px, 240px);
+    }
+
+    100% {
+        transform: scale(1) translate(0px, 0px);
+    }
+}
+
+@keyframes enterthesite_circle_2 {
+    0% {
+        transform: scale(0.8) translate(0px, 0px);
+    }
+
+    25% {
+        transform: scale(0.8) translate(500px, -220px);
+    }
+
+    50% {
+        transform: scale(0.8) translate(800px, 200px);
+    }
+
+    75% {
+        transform: scale(0.8) translate(200px, 500px);
+    }
+
+    100% {
+        transform: scale(0.8) translate(0px, 0px);
+    }
+}
+
+@keyframes enterthesite_circle_3 {
+    0% {
+        transform: scale(1.8) translate(0px, -150px);
+    }
+
+    33% {
+        transform: scale(1.8) translate(150px, 150px);
+    }
+
+    66% {
+        transform: scale(1.8) translate(-150px, 200px);
+    }
+
+    100% {
+        transform: scale(1.8) translate(0px, -150px);
+    }
+}

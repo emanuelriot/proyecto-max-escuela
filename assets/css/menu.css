@@ -1,0 +1,206 @@
+.menu {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    left: 0;
+    top: 0;
+    backdrop-filter: blur(20px);
+    background-color: #b78fd621;
+    z-index: 10;
+}
+
+.menu_links {
+    position: absolute;
+    left: 80px;
+    top: 0;
+    height: 100%;
+    width: 345px;
+    display: flex;
+    align-items: center;
+}
+
+.menu_links2 {
+    position: absolute;
+    right: 80px;
+    top: 0;
+    height: 100%;
+    width: 375px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.menu_links a,
+.menu_links2 a {
+    position: relative;
+    display: block;
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5rem;
+    margin: 0px 20px;
+    color: #3c6ca8;
+}
+
+.menu_links a:hover,
+.menu_links2 a:hover {
+    color: var(--yellow);
+}
+
+.menu_logo {
+    position: relative;
+    display: block;
+    font-size: 20px !important;
+    letter-spacing: 1px;
+    font-weight: 800 !important;
+    text-transform: uppercase;
+    color: #3c6ca8;
+    margin-right: 30px;
+    margin-left: 0px !important;
+    text-shadow: 3px 3px 0px rgba(108, 0, 248, 0.4), 7px 7px 0px rgba(108, 0, 248, 0.2), 11px 11px 0px rgba(108, 0, 248, 0.2);
+}
+
+.menu_mobile {
+    display: none;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background: url(/assets/images/menu.svg) scroll center center no-repeat #83b8fa;
+    background-size: 20px auto;
+    box-shadow: var(--shadow);
+    z-index: 10;
+}
+
+.menu_mobile_fullscreen {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    display: none;
+}
+
+.menu_mobile_fullscreen_open {
+    display: block;
+}
+
+.menu_mobile_fullscreen_close {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 20%);
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.menu_mobile_fullscreen_close_opacity {
+    opacity: 1;
+}
+
+.menu_mobile_fullscreen_link {
+    position: relative;
+    margin: auto 0px auto auto;
+    height: 100%;
+    width: 320px;
+    background-color: #83b8fa;
+    box-shadow: -3px 0px 15px rgb(0 0 0 20%);
+    overflow: hidden;
+    transform: translateX(110%);
+    transition: transform 0.4s;
+    display: flex;
+    align-items: center;
+}
+
+.menu_mobile_fullscreen_link_open {
+    transform: translateX(0%);
+}
+
+.menu_mobile_fullscreen_link span {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    display: block;
+    font-size: 40px;
+    letter-spacing: 1px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #3c6ca8;
+    text-shadow: 3px 3px 0px rgba(108, 0, 248, 0.4), 7px 7px 0px rgba(108, 0, 248, 0.2), 11px 11px 0px rgba(108, 0, 248, 0.2);
+}
+
+.menu_mobile_fullscreen_link div {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 30px;
+    height: auto;
+    overflow: hidden;
+}
+
+.menu_mobile_fullscreen_link a {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 15px 0px;
+    font-size: 24px;
+    letter-spacing: -1px;
+    font-weight: 700;
+    color: #252525;
+}
+
+.menu_mobile_fullscreen_link a:hover {
+    color: var(--yellow);
+}
+
+.menu_mobile_fullscreen_link img {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    padding: 16px;
+    border-radius: 30px;
+    background-color: #e6f1ff;
+    box-shadow: var(--shadow);
+    box-sizing: unset;
+}
+
+.link_menu_logo {
+    position: fixed;
+    left: 30px;
+    top: 40px;
+    display: none;
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #3c6ca8;
+    text-shadow: 3px 3px 0px rgba(108, 0, 248, 0.4), 7px 7px 0px rgba(108, 0, 248, 0.2), 11px 11px 0px rgba(108, 0, 248, 0.2);
+    z-index: 10;
+}
+
+@media screen and (min-width: 860px) {
+    .menu_mobile_fullscreen {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .menu {
+        display: none;
+    }
+
+    .menu_mobile {
+        display: block;
+    }
+
+    .link_menu_logo {
+        display: block;
+    }
+}

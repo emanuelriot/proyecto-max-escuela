@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/assets/css/contacto.css">
+<div class="contact">
+    <div class="form_contact">
+        <span class="contact_title">Contacto</span>
+        <span class="contact_info">Nos gustaría poder ayudarte, envíanos un email detallando cual es el conflicto por el
+            que estas
+            atravesando y nos pondremos en contacto con usted de manera inmediata.</span>
+
+        <div class="input">
+            <span>Nombre</span>
+            <input type="text" id="name" placeholder="Ingrese su nombre">
+        </div>
+
+        <div class="input">
+            <span>Email</span>
+            <input type="email" id="email" placeholder="Ingrese su correo electronico">
+        </div>
+
+        <div class="textarea">
+            <span>Mensaje</span>
+            <textarea id="message" placeholder="Escriba su mensaje"></textarea>
+        </div>
+
+        <button onclick="sendmail()" class="form_button hover_active">Enviar</button>
+    </div>
+</div>
+
+<div class="alert">
+    <div class="alert_box">
+        <span id="alertBox"></span>
+        <button onclick="alertPopup(false)" class="hover_active">Aceptar</button>
+    </div>
+</div>
+
+<div class="load">
+    <img src="/assets/images/loader.gif" alt="load">
+</div>

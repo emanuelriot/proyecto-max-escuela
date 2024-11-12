@@ -1,0 +1,393 @@
+@font-face {
+    font-family: Poppins;
+    src: url(/assets/fonts/poppins/Poppins-Light.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(/assets/fonts/poppins/Poppins-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(/assets/fonts/poppins/Poppins-Medium.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(/assets/fonts/poppins/Poppins-SemiBold.ttf) format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(/assets/fonts/poppins/Poppins-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(/assets/fonts/poppins/Poppins-ExtraBold.ttf) format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url(/assets/fonts/roboto_mono/RobotoMono-SemiBold.ttf) format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    /* COLORS ZIXFOX */
+    --white: #ffffff;
+    --white2: #f3f4f9;
+    --white3: #ededef;
+    --white100: #e6f1ff;
+    --black: #000000;
+    --black2: #232323;
+    --black3: #353535;
+    --map: #aadaff;
+    --gray: #ada9a9;
+    --blue: #242931;
+    --blue2: #4B576C;
+    --red: #bd0000;
+    --orange: #e45f00;
+    --green: #799E0A;
+    --yellow: #FFBC00;
+    --yellow2: #ff9900;
+    --lightBlue: #7ae5bb;
+    --brown: #b45b13;
+    --violet: #8400a8;
+    --purple: #4a00b2;
+    --darkPurple: #301758;
+    --blackPurple: #261440;
+    --board: #831316;
+    /* TIPOGRAPHY */
+    --font: 'Poppins', -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    /* STANDARD */
+    --maxWidth: 1200px;
+    --maxWidthFlex: 1220px;
+    --invert: invert(0);
+    --shadow: 0px 3px 3px rgb(0 0 0 / 15%);
+    --shadow2: 0px 3px 1px rgb(0 0 0 / 15%);
+    --shadow3: 0px 3px 10px rgb(0 0 0 / 20%);
+    --shadow4: 0px 3px 15px rgb(0 0 0 / 30%);
+    --shadowAdmin: 0px 3px 10px rgb(0 0 0 / 7%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+body {
+    margin: 0px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: var(--font);
+    background-color: black;
+    font-weight: 500;
+    color: var(--black);
+    line-height: 1;
+    font-size: 14px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center center;
+    overflow: hidden;
+}
+
+img[src=""],
+img[src="null"],
+img[src="undefined"] {
+    content: url(/assets/images/not_image.png);
+}
+
+input,
+textarea {
+    position: relative;
+    display: block;
+    font-family: inherit;
+    color: inherit;
+    font-weight: 500;
+    background-color: transparent;
+    outline: none;
+    border: 0px;
+    font-size: inherit;
+    box-sizing: border-box;
+}
+
+/* Ocultar controles de los input NUMBERS */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+}
+
+nav,
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inherit;
+}
+
+.invert_image {
+    filter: var(--invert);
+}
+
+.scroll_top_not_visible {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.scroll_left_not_visible {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.scroll_full_not_visible {
+    overflow-x: scroll;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.scroll_top_not_visible::-webkit-scrollbar,
+.scroll_left_not_visible::-webkit-scrollbar,
+.scroll_full_not_visible::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll_top_visible {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.scroll_left_visible {
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.scroll_full_visible {
+    overflow: auto;
+}
+
+.highlighted {
+    font-weight: 700 !important;
+}
+
+
+
+.redondo {
+    border-radius: 9999px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: initial;
+    font-size: 1rem;
+    display: block;
+    font-style: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+
+.hover_active {
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.hover_active:hover {
+    transform: translateY(-3px);
+}
+
+.hover_active:active {
+    transform: translateY(3px);
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.flex_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title_xxxs {
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 1.7rem;
+}
+
+.title_xxs {
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.7rem;
+}
+
+.title_xs {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.6rem;
+}
+
+.title_s {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5rem;
+}
+
+.title_m {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.8rem;
+}
+
+.title_l {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.8rem;
+}
+
+.title_xl {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 2rem;
+    letter-spacing: -0.3px;
+}
+
+.title_xxl {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 2.6rem;
+    letter-spacing: -0.7px;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.backdropblur {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+}
+
+::selection {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+table,
+tr,
+td {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+svg {
+    width: 100%;
+    display: block;
+    fill: currentColor;
+}
+
+/* SCROLL BAR WEBKIT ----------------------------- */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #b78fd6;
+}
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(0, 0, 0); 
+    border-radius: 0px;
+} */
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--white);
+    border-radius: 0px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--white);
+}
+
+/* SCROLL BAR FIREFOX ----------------------------- */

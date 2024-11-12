@@ -1,0 +1,298 @@
+.home {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+    min-height: 100dvh;
+    background-color: #b78fd6;
+}
+
+.home_grid {
+    position: relative;
+    width: calc(100% - 160px);
+    max-width: 1200px;
+    margin: 120px auto 100px auto;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.home_notepad {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    background: url(/assets/images/book.png) scroll left top no-repeat transparent;
+    background-size: 100% auto;
+    overflow: hidden;
+}
+
+.home_text {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.home_text {
+    font-size: 2rem;
+    color: #353535;
+    font-weight: 600;
+    letter-spacing: -1px;
+    line-height: 3rem;
+    padding-top: 20px;
+}
+
+.home_text_big {
+    font-size: 3rem;
+    line-height: 4rem;
+    margin-top: 40px;
+    color: brown;
+}
+
+.home_notepad_label {
+    position: relative;
+    display: block;
+    text-align: center;
+    font-family: 'Roboto Mono';
+    color: black;
+    margin-top: 50px;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.notepad {
+    position: relative;
+    outline: none;
+    width: 100%;
+    height: 300px;
+    margin-top: 30px;
+    font-family: 'Roboto Mono', sans-serif;
+    padding: 0px 28px 0px 65px;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    max-width: 100%;
+    max-height: 300px;
+}
+
+.notepad::placeholder {
+    color: black;
+}
+
+.save_note {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    margin-top: 60px;
+}
+
+.save_note span {
+    position: absolute;
+    left: 32px;
+    top: 14px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: black;
+    width: 192px;
+    line-height: 19px;
+}
+
+.save_note button {
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    width: 120px;
+    border-radius: 99px;
+    background-color: var(--purple);
+    box-sizing: border-box;
+    text-align: center;
+    padding: 15px 0px;
+    color: white;
+    box-sizing: var(--shadow3);
+    font-weight: 700;
+}
+
+.save_note button:hover {
+    background-color: white;
+    color: black;
+}
+
+.notes {
+    position: relative;
+    width: calc(100% - 32px);
+    margin: 30px 0px auto auto;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.note_template {
+    position: relative;
+    margin: 10px 5px;
+    border-radius: 10px;
+    box-shadow: var(--shadow3);
+    width: 120px;
+    height: 150px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.note_template span {
+    position: relative;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 1.3rem;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: 12px;
+    max-width: 120px;
+    padding: 55px 15px 15px 15px;
+    box-sizing: border-box;
+}
+
+.note_close,
+.note_edit {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    border-radius: 99px;
+    width: 35px;
+    height: 35px;
+    background: url(/assets/images/equis_white.png) scroll center center no-repeat var(--red);
+    background-size: 14px auto;
+    box-shadow: var(--shadow3);
+}
+
+.note_edit {
+    right: 60px;
+    background: url(/assets/images/edit.png) scroll center center no-repeat var(--yellow);
+    background-size: 14px auto;
+}
+
+@media screen and (min-width: 1400px) {
+    .notepad {
+        height: 345px;
+        max-height: 345px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .notepad {
+        height: 325px;
+        max-height: 325px;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .home_text {
+        font-size: 1.5rem;
+        line-height: 2.4rem;
+    }
+
+    .notepad {
+        height: 22dvw;
+        max-height: 22dvw;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .home_grid {
+        margin: 90px auto 100px auto;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .home_notepad {
+        grid-column: 1;
+        grid-row: 2;
+        background: url(/assets/images/book.png) scroll left top no-repeat transparent;
+        background-size: calc(100% - 30px) auto;
+    }
+
+    .home_text {
+        grid-column: 1;
+        grid-row: 1;
+        text-align: center;
+    }
+
+    .home_notepad_label {
+        margin-top: 90px;
+    }
+
+    .notepad {
+        height: 50dvw;
+        max-height: 50dvw;
+        padding: 0px 60px 0px 75px;
+    }
+
+    .save_note {
+        width: calc(100% - 40px);
+        margin: 30px auto 0px auto;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .home_grid {
+        width: 100%;
+        margin-top: 100px;
+    }
+
+    .home_text {
+        font-size: 1.3rem;
+        line-height: 2.2rem;
+        padding: 0px 30px;
+    }
+
+    .home_text_big {
+        font-size: 2rem;
+        line-height: 3rem;
+        margin-top: 20px;
+    }
+
+    .home_notepad_label {
+        margin-top: 40px;
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+
+    .notepad {
+        margin-top: 17px;
+        height: 55dvw;
+        max-height: 55dvw;
+        padding: 0px 45px 0px 37px;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        letter-spacing: -0.5px;
+    }
+
+    .save_note {
+        width: calc(100% - 57px);
+        margin: 30px auto 0px auto;
+    }
+
+    .save_note span {
+        left: 0px;
+        top: 14px;
+        font-size: 10px;
+        width: 158px;
+        line-height: 15px;
+    }
+
+    .notes {
+        width: 100%;
+        margin: 30px auto 0px auto;
+        box-sizing: border-box;
+        padding: 0px 20px;
+    }
+
+    .note_template {
+        margin: 10px 5px;
+        width: calc(50% - 10px);
+        height: 200px;
+    }
+
+    .note_template span {
+        font-size: 13px;
+        max-width: 100%;
+        width: 100%;
+    }
+}

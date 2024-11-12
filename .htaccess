@@ -1,0 +1,36 @@
+RewriteOptions inherit
+# Enable Rewriting
+RewriteEngine on
+
+# QUITAR WWW UTILIZANDO UNA REDIRECCIÓN ------------------------------------------------
+
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L] # NO USAR HTTPS
+
+# BLOQUEAR ACCESO AL LISTADO DE DIRECTORIOS QUE NO TENGAN INDEX
+
+Options -Indexes
+
+# BLOCKEAR ACCESO A ARCHIVOS PARA USO EN LINK EXTERNOS AL SITIO
+
+#RewriteCond %{HTTP_REFERER} !^$
+#RewriteRule .*\.(jpg|jpeg|gif|png|bmp|zip)$ - [F,NC]
+
+# PAGINAS PUBLICAS ---------------------------------------------------
+
+ErrorDocument 403 /pages/404.html
+ErrorDocument 500 /pages/404.html
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-l
+
+RewriteCond %{REQUEST_URI} !^/api/?$
+
+# ROUTER
+RewriteRule ^(.*)$ controller/router.php?uri=$1
+RewriteRule ^/?$ controller/router.php?uri=
+
+RewriteRule ^router/?$ controller/router.php?uri=router
+RewriteRule ^api/?$ controller/api.php

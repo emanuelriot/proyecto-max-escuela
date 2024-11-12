@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/assets/css/inicio.css">
+<div class="home">
+    <div class="home_grid">
+        <div class="home_notepad">
+            <span class="home_notepad_label">Diario</span>
+            <textarea class="notepad" id="note"
+                placeholder="Escriba aqui las notas que quieras, lo que se te venga a la mente y guardalos en tu dispositivo"></textarea>
+            <div class="save_note">
+                <span>Se guarda en local storage (tu dispositivo)</span>
+                <button class="hover_active" onclick="save()">Guardar</button>
+            </div>
+            <div class="notes">
+
+            </div>
+        </div>
+        <div class="home_text">
+            <p>
+                En este diario puedes escribir todo
+                lo que sientes durante el día, al
+                salir del sitio, la información del
+                diario de borra pero pueder crear
+                una copia de seguirdad si quieres.
+                Solo tú tienes la información,
+                nosotro no podremos ver lo que
+                escribes.
+            </p>
+            <p class="home_text_big">¡Disfrútalo!</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    listTemplate();
+</script>
