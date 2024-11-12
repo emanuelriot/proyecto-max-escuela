@@ -140,8 +140,11 @@ const Router = {
             let flagInterval = () => {
                 if (InitJs.animationFlag) {
                     let html = document.querySelector('#' + data.id);
-                    html.innerHTML = '';
                     html.innerHTML = data.html;
+                    var scripts = html.getElementsByTagName("script");
+                    for (var i = 0; i < scripts.length; i++) {
+                        eval(scripts[i].innerText);
+                    }
                     InitJs.intro();
                     InitJs.callback(data);
                     complete();
