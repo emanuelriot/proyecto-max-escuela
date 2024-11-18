@@ -1,3 +1,7 @@
+<?php 
+  $name_encode = htmlspecialchars($args['name'] ?? '');
+?>
+
 <!DOCTYPE html>
 <html lang="es" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
@@ -52,7 +56,7 @@
             <tr>
                 <td style="padding:30px 30px 10px 30px;background-color:#ffffff;">
                     <p style="margin:0; font-size: 25px; line-height: 30px; font-weight: bold;">Hola
-                        <?=$args['name']?>
+                        <?=$name_encode?>
                     </p>
                 </td>
             </tr>
