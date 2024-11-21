@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="x-apple-disable-message-reformatting">
-  <title></title>
+  <title>Gracias por contactarte</title>
   <style>
     table, td, div, h1, p {
       font-family: Arial, sans-serif;
@@ -43,7 +43,7 @@
       <tr>
         <td align="center" style="padding:0;">
           <table role="presentation" style="width:94%;max-width:600px; min-width:400px;border:none;border-spacing:0;text-align:left;font-family:Arial,sans-serif;font-size:16px;line-height:22px;color:#363636;">
-          <tr style="background-color: white;">
+            <tr style="background-color: white;">
                 <td style="padding:0;font-size:24px;line-height:28px;font-weight:bold;">
                     <a href="https://max.zixfox.com.ar" style="text-decoration:none;">
                         <img src="https://max.zixfox.com.ar/assets/images/mail.png" width="600" alt=""
@@ -51,30 +51,29 @@
                     </a>
                 </td>
             </tr>
-
-
             <tr>
                 <td style="padding:30px 30px 10px 30px;background-color:#ffffff;">
-                    <p style="margin:0; font-size: 25px; line-height: 30px; font-weight: bold;">Hola
+                    <p style="margin:0; font-size: 25px; line-height: 30px; font-weight: bold;">
+                        Hola
                         <?=$name_encode?>
                     </p>
                 </td>
             </tr>
-
             <tr>
                 <td style="padding:10px 30px;background-color:#ffffff;">
-                    <p style="margin:0;">Gracias por contactarnos, ahora ya tenemos toda la información que nos proporcionaste, evaluaremos tu caso y nos pondremos en contacto contigo lo mas pronto posible
+                    <p style="margin:0;">
+                      Gracias por contactarnos, ahora ya tenemos toda la información que nos proporcionaste, 
+                      evaluaremos tu caso y nos pondremos en contacto contigo lo mas pronto posible
                     </p>
                 </td>
             </tr>
-
             <tr>
                 <td style="padding:10px 30px;background-color:#ffffff;">
-                    <p style="margin:0; font-size: 13px; line-height: 20px;">Nos escribiste esto: <?=$args['message']?>
+                    <p style="margin:0; font-size: 13px; line-height: 20px;">
+                      Nos escribiste esto: <?=$args['message']?>
                     </p>
                 </td>
             </tr>
-
             <tr>
                 <td style="padding:10px 30px 50px 30px;background-color:#ffffff;">
                     <p style="margin:0; text-align: center;">
@@ -85,12 +84,10 @@
                     </p>
                 </td>
             </tr>
-
             <tr>
                 <td style="padding:30px;text-align:center;font-size:12px;background-color:#404040;color:#cccccc;">
                     <p style="margin:0;font-size:14px;line-height:20px;">
-                        MAX &reg;, Salta, Argentina
-                        2024
+                        MAX &reg;, Salta, Argentina 2024
                         <br>
                         <a class="unsub" href="/"
                             style="color:#cccccc;text-decoration:underline;">Desuscribirse</a>
@@ -103,4 +100,4 @@
     </table>
   </div>
 </body>
-</html
+</html>
